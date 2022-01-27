@@ -1,0 +1,7 @@
+.bi-arrows-move {
+    cursor: grab;
+}
+
+.bi-caret-up-fill, .bi-caret-down-fill {
+    cursor: pointer;
+}
