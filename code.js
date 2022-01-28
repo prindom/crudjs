@@ -53,13 +53,23 @@ class Item {
     }
 
     create(name) {
-        this.id = crypto.randomUUID()
+        // this.id = crypto.randomUUID() does not work in safari
+        this.id = this.generateID
         this.name = name
         this.created = Date.now()
         this.updated = 0
         this.save()
         this.render()
     }
+
+    generateID() {
+        let ID = "";
+        let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        for ( var i = 0; i < 12; i++ ) {
+          ID += characters.charAt(Math.floor(Math.random() * 36));
+        }
+        return ID;
+      }
 
     render() {
         let el = document.createElement('li')
