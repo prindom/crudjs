@@ -24,6 +24,11 @@ createModal.addEventListener('shown.bs.modal', () => {
     document.querySelector('input#createItemName').focus()
 })
 
+createModal.querySelector('button.btn-success').addEventListener('click',(event) => {
+    newname = document.querySelector('input#createItemName').value
+    new Item(newname)
+})
+
 updateModal.addEventListener('shown.bs.modal', () => {
     document.querySelector('input#updateItemName').focus()
 })
