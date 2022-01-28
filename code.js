@@ -54,7 +54,7 @@ class Item {
 
     create(name) {
         // this.id = crypto.randomUUID() does not work in safari
-        this.id = this.generateID
+        this.id = this.generateID()
         this.name = name
         this.created = Date.now()
         this.updated = 0
